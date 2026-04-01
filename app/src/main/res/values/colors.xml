@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Pink_hokage"> #E0D3E6</color>
+    <color name="cde4f5">#CDE4F5</color>
+    <color name="Warna_tidak_utama">#D9E0E4</color>
+
 </resources>
