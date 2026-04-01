@@ -1,15 +1,11 @@
-package com.example.filbertanggriawan.Pertemuan_2
+package com.example.filbertanggriawan.Pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.filbertanggriawan.R
 import com.example.filbertanggriawan.databinding.ActivityThirdBinding
 
 class ThirdActivity : AppCompatActivity() {
@@ -29,6 +25,9 @@ class ThirdActivity : AppCompatActivity() {
             val nama = binding.nama.text
             Log.e("Klik btnSubmit","Tombol berhasil di tekan. Isi dari inputNama = $nama")
             Toast.makeText(this, "Pesan Berhasi Terkirim ke $nama" , Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)
         }
     }
 }
