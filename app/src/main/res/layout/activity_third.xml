@@ -34,7 +34,6 @@
         android:text="kirim"
         android:textStyle="bold"
         android:textColor="#44D75E"
-        android:background="@color/"
         android:fontFamily="@font/roboto"
         app:layout_constraintCircleRadius="100dp"
         app:cardBackgroundColor="@color/Warna_tidak_utama"
