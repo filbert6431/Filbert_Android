@@ -9,6 +9,23 @@
     android:background="#F0F4FF"
     tools:context=".Pertemuan_2.SecondActivity">
 
+    <!--    kalau di halaman layout, dia tidak tampil pesan subtitle-->
+    <!--    dari toolbarnya-->
+    <!--    -->
+    <!--    kita harus jalankan kodenya terlebih dahulu untuk melihat-->
+    <!--    hasil-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
+
     <View
         android:id="@+id/decorCircle"
         android:layout_width="300dp"

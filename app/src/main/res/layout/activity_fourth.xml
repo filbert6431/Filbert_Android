@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".Pertemuan_4.FourthActivity">
 
+    <!--    kalau di halaman layout, dia tidak tampil pesan subtitle-->
+    <!--    dari toolbarnya-->
+    <!--    -->
+    <!--    kita harus jalankan kodenya terlebih dahulu untuk melihat-->
+    <!--    hasil-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="250dp"
