@@ -28,6 +28,15 @@ class webViewActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+        // membuat bisa di zoom
+        binding.webView.settings.setSupportZoom(true)
+        binding.webView.settings.builtInZoomControls = true
+
+        // (opsional biar tombol zoom tidak muncul / tapi kalau
+        // mau munculkan boleh juga, jadi hapus kode dibawah / beri comment)
+        binding.webView.settings.displayZoomControls = false
+
+
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.loadUrl("https://merdeka.com")

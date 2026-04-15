@@ -47,7 +47,8 @@
             android:layout_height="wrap_content"
             android:text="button"
             android:backgroundTint="@color/Pink_hokage"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            app:icon="@drawable/ic_googledrive"/>
 
         <!-- Tambahkan konten panjang supaya bisa di-scroll -->
         <TextView

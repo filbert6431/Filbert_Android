@@ -29,6 +29,7 @@ class activity_fifth : AppCompatActivity() {
             subtitle = "Ini adalah subtitle"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_googledrive)
 
             Log.d("DEBUG", "ActionBar = $supportActionBar")
         }
