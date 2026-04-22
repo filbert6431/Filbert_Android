@@ -14,22 +14,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilbertAnggriawan">
         <activity
-            android:name=".AuthActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".AuthActivity"
+            android:exported="false"/>
         <activity
             android:name=".Pertemuan_5.webViewActivity"
             android:exported="false" />
         <activity
             android:name=".Pertemuan_5.activity_fifth"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".Pertemuan_4.FourthActivity"
             android:exported="false" />
