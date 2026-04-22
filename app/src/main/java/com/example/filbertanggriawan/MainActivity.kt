@@ -2,12 +2,14 @@ package com.example.filbertanggriawan
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.filbertanggriawan.Pertemuan_4.FourthActivity
 import com.example.filbertanggriawan.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +41,41 @@ class MainActivity : AppCompatActivity() {
 
 
             startActivity(intent)
+        }
+
+
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
+        binding.btnlogout.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+
+
+                    dialog.dismiss()
+
+                    // hapus tokem / data share preferencefilbert
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish() // agar saat user logout, dia mematikan halaman setelah login
+                    // sehingga saat user masuk ke aplikasinya kembali ia tidak mengarah ke home
+                    // tapi ke halaman auth
+
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
+
+
         }
     }
 }
