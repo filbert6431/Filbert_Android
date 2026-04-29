@@ -7,7 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.filbertanggriawan.Pertemuan_2.SecondActivity
+import com.example.filbertanggriawan.Pertemuan_3.ThirdActivity
 import com.example.filbertanggriawan.Pertemuan_4.FourthActivity
+import com.example.filbertanggriawan.Pertemuan_5.activity_fifth
+import com.example.filbertanggriawan.Pertemuan_7.SeventhActivity
 import com.example.filbertanggriawan.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -32,16 +36,7 @@ class MainActivity : AppCompatActivity() {
             // comment
         }
 
-        binding.kembali.setOnClickListener {
 
-            val intent = Intent(this, FourthActivity::class.java)
-            intent.putExtra("name", "Politeknik Caltex Riau")
-            intent.putExtra("from", "Rumbai")
-            intent.putExtra("age", 25)
-
-
-            startActivity(intent)
-        }
 
 
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
@@ -76,6 +71,36 @@ class MainActivity : AppCompatActivity() {
                 .show()
 
 
+        }
+
+        binding.btnPertemuan2.setOnClickListener {
+            intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan3.setOnClickListener {
+            intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan4.setOnClickListener {
+
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
+            intent = Intent(this, FourthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan5.setOnClickListener {
+            intent = Intent(this, activity_fifth::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan7.setOnClickListener {
+            intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
         }
     }
 }

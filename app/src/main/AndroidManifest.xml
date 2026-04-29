@@ -14,9 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilbertAnggriawan">
         <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pertemuan_7.SeventhActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +30,7 @@
         </activity>
         <activity
             android:name=".AuthActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Pertemuan_5.webViewActivity"
             android:exported="false" />
