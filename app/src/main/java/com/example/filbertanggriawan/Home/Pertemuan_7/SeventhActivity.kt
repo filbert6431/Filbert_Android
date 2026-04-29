@@ -1,4 +1,4 @@
-package com.example.filbertanggriawan.Pertemuan_7
+package com.example.filbertanggriawan.Home.Pertemuan_7
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.filbertanggriawan.R
 import com.example.filbertanggriawan.databinding.ActivitySeventhBinding
+import com.google.android.material.snackbar.Snackbar
 
 class SeventhActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySeventhBinding
@@ -72,14 +73,14 @@ class SeventhActivity : AppCompatActivity() {
             }
 
             R.id.action_search -> {
-                com.google.android.material.snackbar.Snackbar
-                    .make(binding.root, "Search Clicked 🔍", com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
+                Snackbar
+                    .make(binding.root, "Search Clicked 🔍", Snackbar.LENGTH_SHORT)
                     .show()
                 true
             }
             R.id.action_settings -> {
-                com.google.android.material.snackbar.Snackbar
-                    .make(binding.root, "Search Clicked 🔍", com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
+                Snackbar
+                    .make(binding.root, "Search Clicked 🔍", Snackbar.LENGTH_SHORT)
                     .show()
                 true
             }

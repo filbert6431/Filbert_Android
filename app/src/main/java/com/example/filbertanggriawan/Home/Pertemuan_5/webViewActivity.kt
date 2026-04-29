@@ -1,4 +1,4 @@
-package com.example.filbertanggriawan.Pertemuan_5
+package com.example.filbertanggriawan.Home.Pertemuan_5
 
 import android.os.Bundle
 import android.view.Menu
@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.filbertanggriawan.R
 import com.example.filbertanggriawan.databinding.ActivityWebViewBinding
+import com.google.android.material.snackbar.Snackbar
 
 class webViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWebViewBinding
@@ -88,14 +89,14 @@ class webViewActivity : AppCompatActivity() {
             }
 
             R.id.action_search -> {
-                com.google.android.material.snackbar.Snackbar
-                    .make(binding.root, "Search Clicked 🔍", com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
+                Snackbar
+                    .make(binding.root, "Search Clicked 🔍", Snackbar.LENGTH_SHORT)
                     .show()
                 true
             }
             R.id.action_settings -> {
-                com.google.android.material.snackbar.Snackbar
-                    .make(binding.root, "Search Clicked 🔍", com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
+                Snackbar
+                    .make(binding.root, "Search Clicked 🔍", Snackbar.LENGTH_SHORT)
                     .show()
                 true
             }

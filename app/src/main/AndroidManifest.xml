@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FilbertAnggriawan">
         <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Pertemuan_7.SeventhActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.Pertemuan_7.SeventhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,22 +32,22 @@
             android:name=".AuthActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan_5.webViewActivity"
+            android:name=".Home.Pertemuan_5.webViewActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan_5.activity_fifth"
+            android:name=".Home.Pertemuan_5.activity_fifth"
             android:exported="true" />
         <activity
-            android:name=".Pertemuan_4.FourthActivity"
+            android:name=".Home.Pertemuan_4.FourthActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan_3.ThirdResultActivity"
+            android:name=".Home.Pertemuan_3.ThirdResultActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan_3.ThirdActivity"
+            android:name=".Home.Pertemuan_3.ThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan_2.SecondActivity"
+            android:name=".Home.Pertemuan_2.SecondActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

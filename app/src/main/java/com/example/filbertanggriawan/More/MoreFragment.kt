@@ -1,25 +1,19 @@
-package com.example.filbertanggriawan.Pertemuan_7
+package com.example.filbertanggriawan.More
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.filbertanggriawan.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SatuFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SatuFragment : Fragment() {
+class MoreFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_satu, container, false)
+        return inflater.inflate(R.layout.fragment_more, container, false)
     }
-
-
 }

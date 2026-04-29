@@ -6,7 +6,7 @@
     android:background="@color/Pink_hokage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pertemuan_3.ThirdActivity">
+    tools:context=".Home.Pertemuan_3.ThirdActivity">
 
     <!--    kalau di halaman layout, dia tidak tampil pesan subtitle-->
     <!--    dari toolbarnya-->
