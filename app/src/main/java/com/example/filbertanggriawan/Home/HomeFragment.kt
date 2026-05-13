@@ -14,6 +14,7 @@ import com.example.filbertanggriawan.Home.Pertemuan_3.ThirdActivity
 import com.example.filbertanggriawan.Home.Pertemuan_4.FourthActivity
 import com.example.filbertanggriawan.Home.Pertemuan_5.activity_fifth
 import com.example.filbertanggriawan.Home.Pertemuan_7.SeventhActivity
+import com.example.filbertanggriawan.Home.Pertemuan_9.NinthActivity
 import com.example.filbertanggriawan.R
 import com.example.filbertanggriawan.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -96,6 +97,10 @@ class HomeFragment : Fragment() {
 
         binding.btnPertemuan7.setOnClickListener {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btntoNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
     }
