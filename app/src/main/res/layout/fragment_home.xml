@@ -94,6 +94,15 @@
             app:layout_gravity="fill_horizontal"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTenth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pertemuan 10"
+            app:layout_columnWeight="1"
+            app:cornerRadius="2dp"
+            app:layout_gravity="fill_horizontal"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnlogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,7 +111,10 @@
             app:cornerRadius="2dp"
             app:layout_gravity="fill_horizontal"/>
 
+
+
     </androidx.gridlayout.widget.GridLayout>
+
 
 
 

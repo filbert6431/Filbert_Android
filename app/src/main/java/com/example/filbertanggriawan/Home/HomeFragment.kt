@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.filbertanggriawan.AuthActivity
+import com.example.filbertanggriawan.Home.Pertemuan_10.TenthActivity
 import com.example.filbertanggriawan.Home.Pertemuan_2.SecondActivity
 import com.example.filbertanggriawan.Home.Pertemuan_3.ThirdActivity
 import com.example.filbertanggriawan.Home.Pertemuan_4.FourthActivity
@@ -101,6 +102,11 @@ class HomeFragment : Fragment() {
         }
         binding.btntoNinth.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
     }
