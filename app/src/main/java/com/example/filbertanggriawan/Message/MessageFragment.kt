@@ -19,59 +19,27 @@ class MessageFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val messageList = listOf(
-        MessageModel(
-            "Alya",
-            "Halo! Apa kabar?",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Alya"
-        ),
-        MessageModel(
-            "Budi",
-            "Sudah makan?",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Budi"
-        ),
-        MessageModel(
-            "Citra",
-            "Jangan lupa tugasnya ya!",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Citra"
-        ),
-        MessageModel(
-            "Dika",
-            "Besok kita rapat jam 9",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Dika"
-        ),
-        MessageModel(
-            "Eka",
-            "Nice job kemarin!",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Eka"
-        ),
-        MessageModel(
-            "Fajar",
-            "Lagi ngapain?",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Fajar"
-        ),
-        MessageModel(
-            "Gita",
-            "Boleh minta tolong?",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Gita"
-        ),
-        MessageModel(
-            "Hana",
-            "Lihat email ya",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Hana"
-        ),
+        MessageModel("Alya", "Halo! Apa kabar?", "https://api.dicebear.com/7.x/avataaars/png?seed=Alya"),
+        MessageModel("Budi", "Sudah makan?", "https://api.dicebear.com/7.x/avataaars/png?seed=Budi"),
+        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://api.dicebear.com/7.x/avataaars/png?seed=Citra"),
+        MessageModel("Dika", "Besok kita rapat jam 9", "https://api.dicebear.com/7.x/avataaars/png?seed=Dika"),
+        MessageModel("Eka", "Nice job kemarin!", "https://api.dicebear.com/7.x/avataaars/png?seed=Eka"),
+        MessageModel("Fajar", "Lagi ngapain?", "https://api.dicebear.com/7.x/avataaars/png?seed=Fajar"),
+        MessageModel("Gita", "Boleh minta tolong?", "https://api.dicebear.com/7.x/avataaars/png?seed=Gita"),
+        MessageModel("Hana", "Lihat email ya", "https://api.dicebear.com/7.x/avataaars/png?seed=Hana"),
         MessageModel("Irfan", "Oke noted", "https://api.dicebear.com/7.x/avataaars/png?seed=Irfan"),
-        MessageModel(
-            "Joko",
-            "Sampai jumpa besok",
-            "https://api.dicebear.com/7.x/avataaars/png?seed=Joko"
-        )
+        MessageModel("Joko", "Sampai jumpa besok", "https://api.dicebear.com/7.x/avataaars/png?seed=Joko")
     )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true) // Panggil di onCreate agar menu muncul
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         _binding = FragmentMoreBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -79,31 +47,20 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
-            title ="Message"
-        }
-
-
+        // Setup Toolbar
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Message"
-
-            setHasOptionsMenu(true)
-            /* Definisikan adapter sebagai penghubung dataList dengan layout simple_list_item_1 */
-
-            (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
-            (requireActivity() as AppCompatActivity).supportActionBar?.apply {
-                title = "Home"
-            }
-            val adapter = MessageAdapter(requireContext(), messageList)
-            binding.listViewItems.adapter = adapter
         }
-    }
 
+        // Setup ListView Adapter
+        val adapter = MessageAdapter(requireContext(), messageList)
+        binding.listViewItems.adapter = adapter
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.message_toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -113,11 +70,12 @@ class MessageFragment : Fragment() {
                 startActivity(intent)
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
-
-
-

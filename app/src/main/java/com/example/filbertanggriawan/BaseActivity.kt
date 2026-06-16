@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.example.filbertanggriawan.Home.HomeFragment
 import com.example.filbertanggriawan.Message.MessageFragment
 import com.example.filbertanggriawan.More.MoreFragment
+import com.example.filbertanggriawan.Note.NoteFragment
 import com.example.filbertanggriawan.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -41,6 +42,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.Notes-> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else -> false // return false jika item tidak ada yang di klik
