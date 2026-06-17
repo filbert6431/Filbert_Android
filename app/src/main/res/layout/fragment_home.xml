@@ -107,6 +107,15 @@
                 app:layout_gravity="fill_horizontal" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/Button_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertemuan 13"
+                app:cornerRadius="2dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnlogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

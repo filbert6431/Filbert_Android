@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.filbertanggriawan.AuthActivity
 import com.example.filbertanggriawan.Data.api.PhotoApiClient
 import com.example.filbertanggriawan.Home.Pertemuan_10.TenthActivity
+import com.example.filbertanggriawan.Home.Pertemuan_13.ThirteenthActivity
 import com.example.filbertanggriawan.Home.Pertemuan_2.SecondActivity
 import com.example.filbertanggriawan.Home.Pertemuan_3.ThirdActivity
 import com.example.filbertanggriawan.Home.Pertemuan_4.FourthActivity
@@ -116,6 +117,11 @@ class HomeFragment : Fragment() {
 
         binding.btnTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.Button13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 
